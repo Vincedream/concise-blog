@@ -1,0 +1,8 @@
+[2018-03-15T11:26:32.813] [INFO] normal - OPTIONS /test 响应时间为: 0.034s
+[2018-03-15T11:26:32.863] [INFO] normal - GET /test 响应时间为: 0.008s
+[2018-03-15T11:30:46.765] [INFO] normal - OPTIONS /test 响应时间为: 0.009s
+[2018-03-15T11:31:07.527] [INFO] normal - OPTIONS /test 响应时间为: 0.004s
+[2018-03-15T11:31:41.741] [INFO] normal - OPTIONS /test 响应时间为: 0.077s
+[2018-03-15T11:31:42.004] [INFO] normal - GET /test 响应时间为: 0.005s
+[2018-03-15T11:32:24.150] [INFO] normal - OPTIONS /test 响应时间为: 0.001s
+[2018-03-15T11:32:24.321] [INFO] normal - GET /test 响应时间为: 0.002s
