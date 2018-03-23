@@ -12,6 +12,7 @@ const articleSchema = new Schema({
   },
   comments: [{
     type: Schema.Types.ObjectId,
+    default: [],
     ref: 'comment'
   }]
 })
