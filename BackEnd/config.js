@@ -1,6 +1,6 @@
 module.exports = {
   db: {
-    name: 'koaTest',
+    name: 'VinceBlog',
     host: '127.0.0.1',
     port: 27017
   },

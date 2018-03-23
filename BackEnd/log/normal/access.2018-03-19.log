@@ -1,0 +1,6 @@
+[2018-03-19T09:56:39.536] [INFO] normal - PUT /test/get 响应时间为: 0.037s
+[2018-03-19T10:00:50.528] [INFO] normal - PUT /test/get 响应时间为: 0.043s
+[2018-03-19T10:00:52.251] [INFO] normal - PUT /test/get 响应时间为: 0.001s
+[2018-03-19T10:51:34.328] [INFO] normal - GET /test/ 响应时间为: 0.067s
+[2018-03-19T10:51:42.190] [INFO] normal - GET /test/ 响应时间为: 0.003s
+[2018-03-19T10:51:46.451] [INFO] normal - GET /test/ 响应时间为: 0.002s

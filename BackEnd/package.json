@@ -17,6 +17,7 @@
     "koa-router": "^7.4.0",
     "koa2-cors": "^2.0.5",
     "log4js": "^2.5.3",
+    "markedtoc": "^1.2.0",
     "mongoose": "^5.0.10",
     "zlib": "^1.0.5"
   }

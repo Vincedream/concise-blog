@@ -7,7 +7,7 @@ const errorHandle = require('./error-handler')
 const json = require('./json')
 
 module.exports = (app) => {
-  app.use(errorHandle)
+  app.use(errorHandle())
   app.use(logger())
   app.use(cors({
     origin: '*',
@@ -21,6 +21,7 @@ module.exports = (app) => {
     /^\/register/,
     /^\/test/,
     /^\/login/,
+    /^\/article/,
   ]}))
   app.use(bodyParser())
   app.use(json())
