@@ -11,8 +11,7 @@ const articleSchema = new Schema({
     default: Date.now()
   },
   comments: [{
-    type: Schema.Types.ObjectId,
-    default: [],
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'comment'
   }]
 })

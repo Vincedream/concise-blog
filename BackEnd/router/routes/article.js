@@ -8,4 +8,8 @@ module.exports = router => {
   router.get('/article/:id', ArticleController.article.getArticleById) // 获取指定ID文章
   router.patch('/article/:id', ArticleController.article.updateArticle) // 更新指定ID文章
   router.delete('/article/:id', ArticleController.article.deleteArticle) // 更新指定ID文章
+  
+  router.post('/comment',ArticleController.comment.addComment) // 添加评论
+  router.get('/comment',ArticleController.comment.getComment) // 添加评论
+
 }

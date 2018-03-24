@@ -1,3 +1,4 @@
+const commentModel = require('../../models/comment')
 const ArticleModel = require('../../models/article')
 const filter = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>~！@#￥……&*（）——|{}【】‘；：”“'。，、？]", 'g') // 过滤敏感字
 
@@ -40,7 +41,7 @@ class ArticleController {
     ArticleController.checkArticle(req, ['comments'], ctx)
     const result = await ArticleModel.create({...req}).catch( e => ctx.throw(500))
     ctx.status = 201
-    ctx.send({msg: '添加成功'})
+    ctx.send({message: '添加成功'})
   }
       
   /**
@@ -103,7 +104,7 @@ class ArticleController {
     const result = await ArticleModel
       .findById(id)
       .populate({
-        path: 'comment'
+        path: 'comments',
       })
       .exec()
       .catch(e => ctx.throw(500))

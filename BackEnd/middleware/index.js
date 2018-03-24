@@ -21,6 +21,7 @@ module.exports = (app) => {
     /^\/register/,
     /^\/test/,
     /^\/login/,
+    /^\/comment/,
     /^\/article/,
   ]}))
   app.use(bodyParser())

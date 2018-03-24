@@ -6,7 +6,15 @@ const commentSchema = new Schema({
     type: String,
     default: '不愿意透露email的大佬'
   },
+  articleId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'article'
+  },
   content: String,
+  replyed: {
+    type: Boolean,
+    default: false
+  },
   createDate: {
     type: Date,
     default: Date.now()
