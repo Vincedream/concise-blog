@@ -23,6 +23,7 @@ module.exports = (app) => {
     /^\/login/,
     /^\/comment/,
     /^\/article/,
+    /^\/project/,
   ]}))
   app.use(bodyParser())
   app.use(json())

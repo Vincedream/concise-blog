@@ -5,6 +5,7 @@ const projectSchema = new Schema({
   fullName: String,
   description: String,
   language: String,
+  htmlUrl:String,
   stars: Number,
   forks: Number
 })
