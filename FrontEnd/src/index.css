@@ -1,23 +1,5 @@
-    /* overflow-y: hidden; */
-    body{
-        overflow-y: auto;
-    }
-    ::-webkit-scrollbar{
-      display:none;
-    }
-a:link {
-  text-decoration: none;
-  color:black;
-}
-a:visited {
-  text-decoration: none;
-  color:black;
-}
-a:hover {
-  text-decoration: none;
-  color:black;
-}
-a:active {
-  text-decoration: none;
-  color:black;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
