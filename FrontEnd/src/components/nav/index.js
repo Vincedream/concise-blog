@@ -4,7 +4,7 @@ import './index.less'
 
 const Nav = ({}) => {
   return(
-    <nav className="navBox">
+    <nav className="navBox reset">
       <ul>
         <li onClick={()=>history.push('/')}>文章</li>
         <li onClick={()=>history.push('/class')}>分类</li>

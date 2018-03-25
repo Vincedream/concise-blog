@@ -7,7 +7,7 @@ import './index.less'
 
 const ProjectBox = ({data}) => {
   return(
-    <div className="projectBox">
+    <div className="projectBox reset">
     {data.map(v => (
     <QueueAnim key={v._id} duration={600} type={"bottom"}>
       <div key={v._id} className="singleBox">

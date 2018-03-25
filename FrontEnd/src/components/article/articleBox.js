@@ -5,7 +5,7 @@ import './articleBox.less'
 
 const ArticleBox = ({push,items, total, loadTotal, loadMore}) => {
   return(
-    <div className="articleBox">
+    <div className="articleBox reset">
     <QueueAnim  duration={[500,80]} type={['bottom','bottom']} >
     {items.map(v => (
         <div onClick={() => {push(`/article/${v._id}`)}} key={v._id} className="signleBox">

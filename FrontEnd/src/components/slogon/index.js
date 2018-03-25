@@ -5,7 +5,7 @@ import "./index.less"
 
 const Slogon = ({}) => {
   return(
-    <div className="slogonBox">
+    <div className="slogonBox reset">
       <div className="avatarBox">
         <img src={avatar} alt=""/>
       </div>
