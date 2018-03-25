@@ -1,0 +1,32 @@
+.navBox {
+  position: absolute;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: 280px;
+  width: 400px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  li {
+    display: inline-block;
+    margin: 0 24px;
+    color: #a0a0a0;
+    font-size: 15px;
+    cursor: pointer;
+    &:hover {
+      color: #636363;
+    }
+  }
+  &:after {
+    content: "";
+    width: 78%;
+    height: 1px;
+    background-color: #efefef;
+    position: absolute;
+    margin: 0 auto;
+    bottom: -30%;
+    z-index: 1;
+    left: 0px;
+    right:0px;
+  }
+}
