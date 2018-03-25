@@ -5,6 +5,7 @@ import Slogon from './components/slogon'
 import Nav from './components/nav'
 
 import Article from './container/article'
+import ArticlePage from './container/articlePage'
 import Class from './container/class'
 import Project from './container/project'
 import Photo from './container/photo'
@@ -20,6 +21,7 @@ class App extends Component {
         <Nav />
         <Switch>
           <Route exact path="/" component={Article}></Route>
+          <Route exact path="/article/:id" component={ArticlePage}></Route>
           <Route exact path="/class" component={Class}></Route>
           <Route exact path="/project" component={Project}></Route>
           <Route exact path="/photo" component={Photo}></Route>
