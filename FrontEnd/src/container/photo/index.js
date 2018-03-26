@@ -1,11 +1,12 @@
 import React from 'react'
-
+import Reaaa from 'react-npm-demo-hjb'
 
 class Photo extends React.Component{
   render(){
     return(
-      <div>
+      <div >
         Photo
+        <Reaaa style={{zIndex:'111'}} />
       </div>
     )
   }

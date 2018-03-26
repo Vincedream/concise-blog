@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from '../../config/axios'
 import ContentBox from '../../components/article/contentBox'
+import ArticleComment from '../../components/comment/articleComment'
 
 class About extends React.Component{
   constructor(props) {
@@ -17,13 +18,21 @@ class About extends React.Component{
     })
     console.log(this.state.html)
   }
+
+  handleInput(key, e){
+    this.setState({
+      [key]: e.target.value
+    })
+  }
+
   componentDidMount(){
     this.getArticle()
   }
   render(){
     return(
-      <div >
+      <div style={{width: "760px",position: "absolute",left: "50%",marginTop: "330px",marginLeft: "-380px"}} >
       <ContentBox data={this.state.data} />
+      <ArticleComment style={{background:'red',zIndex:'1000'}} textValue={this.state.email} handleInput={this.handleInput.bind(this)} />
       </div>
     )
   }
