@@ -40,11 +40,13 @@ export function getArticleData() {
       let result = await getData
       if (result.status === 200) {
         let data = result.data.data
+        let tmp = initData(data.items)
         let allItems = data.items.slice(0)  // 浅拷贝数组
         dispatch(getArticleSuccess({
           items:data.items,
           total:data.total,
-          loadItems: allItems.splice(0,8)
+          loadItems: allItems.splice(0,8),
+          classObj:tmp
         }))
       }
     } catch (e) {
@@ -78,4 +80,29 @@ export function loadMore(obj){
       dispatch(loadMoreSuccess(loadData))
     }
   }
+}
+
+
+
+
+function initData(items){
+  var classItems = {
+  }
+  for(var key in items) {
+    let classarray = items[key].classify
+    for(var skey in classarray) {
+      let classNode = classarray[skey]
+      if (!classItems.hasOwnProperty(classNode)){
+        classItems[classNode]=[]
+        let a = items[key]
+        classItems[classNode].push(a)
+        // console.log(classarray[skey])
+        // console.log(classItems)
+      }else{
+        let a = items[key]
+        classItems[classNode].push(a)
+      }
+    }
+  }
+  return classItems
 }

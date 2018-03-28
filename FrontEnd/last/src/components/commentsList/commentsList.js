@@ -6,7 +6,7 @@ class CommentsList extends React.Component{
             width:100%;
             margin: 10px 0;
             h4{
-                padding-left:15px;
+              padding-left:15px;
             }
         `;
         const Comment = styled.div`

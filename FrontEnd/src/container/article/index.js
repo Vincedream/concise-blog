@@ -16,7 +16,6 @@ class Article extends React.Component{
     }
   }
   render(){
-    console.log(this.props)
     return(
       <div>
         <ArticleBox push={this.props.history.push} items={this.props.article.loadItems} loadMore={this.props.loadMore} total={this.props.article.total} loadTotal={this.props.article.loadTotal} />

@@ -171,6 +171,7 @@ class Post extends React.Component {
             line-height:45px;
             color:#949494;
           }
+          
     `;
     return (
       <ArticleBox>
