@@ -21,7 +21,7 @@ const ProjectBox = ({data}) => {
       </div>
     </QueueAnim>
     ))}
-    {data ? (
+    {data.length!==0 ? (
       <div className="updateBox">
         <p>数据每5小时更新</p>
       </div>

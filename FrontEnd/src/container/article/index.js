@@ -3,7 +3,6 @@ import { connect } from "react-redux"
 import { getArticleData, loadMore } from "../../redux/article.redux"
 
 import ArticleBox from '../../components/article/articleBox'
-import LoadArticleButton from '../../components/button/loadArticleButton'
 
 @connect(
   state => state,

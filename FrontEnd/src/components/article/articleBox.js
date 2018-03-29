@@ -1,6 +1,7 @@
 import React from 'react'
 import QueueAnim from 'rc-queue-anim'
 import LoadArticleButton from '../button/loadArticleButton'
+import SingleArticle from './singleArticle'
 import './articleBox.less'
 
 const ArticleBox = ({push,items, total, loadTotal, loadMore}) => {
@@ -8,15 +9,7 @@ const ArticleBox = ({push,items, total, loadTotal, loadMore}) => {
     <div className="articleBox reset">
     <QueueAnim  duration={[500,80]} type={['bottom','bottom']} >
     {items.map(v => (
-        <div onClick={() => {push(`/article/${v._id}`)}} key={v._id} className="signleBox">
-          <h3 className="title">{v.title}</h3>
-          <ul>
-            {(v.classify).map(j => (
-              <li key={j+v._id} >{j}</li>
-            ))}
-          </ul>
-          <p>{(v.releaseDate).split('-')[0]+' / '+(v.releaseDate).split('-')[1]+' / '+((v.releaseDate).split('-')[2]).split('T')[0]}</p>
-        </div>
+      <SingleArticle key={v._id} v={v} push={push} />
     ))}
     </QueueAnim>
     {items.length===0 ? null : (

@@ -2,12 +2,14 @@ import axios from "../config/axios"
 
 const GET_ARTICLE_DATA = "GET_ARTICLE_DATA"
 const LOAD_MORE_ARTICLE = "LOAD_MORE_ARTICLE"
+const CHANGE_CLASS_TYPE = "CHANGE_CLASS_TYPE"
 
 const initState = {
   total: 0,
   items: [],
   loadItems: [],
   loadTotal: 8,
+  choseType:''
 }
 
 export function article(state = initState, action) {
@@ -15,6 +17,8 @@ export function article(state = initState, action) {
     case GET_ARTICLE_DATA:
       return {...state, ...action.payload}
     case LOAD_MORE_ARTICLE:
+      return {...state, ...action.payload}
+    case CHANGE_CLASS_TYPE:
       return {...state, ...action.payload}
     default:
       return state
@@ -80,6 +84,13 @@ export function loadMore(obj){
       dispatch(loadMoreSuccess(loadData))
     }
   }
+}
+
+export function changeType(key){
+  let obj = {
+    choseType: key
+  }
+  return { type: CHANGE_CLASS_TYPE, payload: obj }
 }
 
 
