@@ -3,7 +3,10 @@ const Schema = mongoose.Schema
 
 const subscribeSchema = new Schema({
   email: String,
-  createDate: Date
+  status: {
+    type: Boolean,
+    default: true
+  }
 })
 
 const Subscribe = mongoose.model('subscribe', subscribeSchema)

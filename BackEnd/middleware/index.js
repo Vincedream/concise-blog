@@ -19,7 +19,7 @@ module.exports = (app) => {
   }))
   app.use(koaJwt({secret}).unless({path: [
     /^\/register/,
-    /^\/test/,
+    /^\/user/,
     /^\/login/,
     /^\/comment/,
     /^\/article/,

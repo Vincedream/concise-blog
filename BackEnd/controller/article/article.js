@@ -1,6 +1,7 @@
 const commentModel = require('../../models/comment')
 const ArticleModel = require('../../models/article')
 const filter = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>~！@#￥……&*（）——|{}【】‘；：”“'。，、？]", 'g') // 过滤敏感字
+const markdown = require('./markdown')
 
 
 class ArticleController {
@@ -38,8 +39,9 @@ class ArticleController {
    */
   static async addArticle(ctx, next) {
     const req = ctx.request.body
+    const htmlContent = markdown(req.content)
     ArticleController.checkArticle(req, ['comments'], ctx)
-    const result = await ArticleModel.create({...req}).catch( e => ctx.throw(500))
+    const result = await ArticleModel.create({...req, htmlContent}).catch( e => ctx.throw(500))
     ctx.status = 201
     ctx.send({message: '添加成功'})
   }
@@ -109,6 +111,15 @@ class ArticleController {
       .exec()
       .catch(e => ctx.throw(500))
     ArticleController.resultIsNull(result, ctx)
+    // console.log(markdown(result.content))
+    // let a = result.content
+    // let markContent = markdown(a)
+    // let result1 = {...result}
+    // console.log(markContent)
+    // let gg = {
+    //   content: markContent,
+      
+    // }
     ctx.send({article:result})
   }
 

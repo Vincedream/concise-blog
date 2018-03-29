@@ -3,8 +3,7 @@ const Schema = mongoose.Schema
 
 const photoSchema = new Schema({
   title: String,
-  photoArray: Array,
-  createDate: Array
+  photoArray: Array
 })
 
 const Photo = mongoose.model('photo', photoSchema)

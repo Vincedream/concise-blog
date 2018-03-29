@@ -2,7 +2,7 @@ var schedule = require("node-schedule");
 const ProjectModel = require('../../models/project')
 const featchData = require('./getGithub').getProjectData
 const rule = new schedule.RecurrenceRule();  
-const times = [16,17]  
+const times = [1]  
 rule.hour  = times;  
 
 async function updateProject() {
@@ -10,6 +10,7 @@ async function updateProject() {
   for (var a = 0; a < projectArr.length; a++) {
     const result = await featchData(projectArr[a].fullName)
     const update = await ProjectModel.findByIdAndUpdate(projectArr[a].id,{...result})
+    console.log(a)
     console.log(update)
   }
 }

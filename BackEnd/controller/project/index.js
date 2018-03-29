@@ -5,8 +5,7 @@ class ProjectController {
   static constructor() {}
 
   static async getProject(ctx, next) {
-    
-    const result = await ProjectModel.find({}).exec().catch(e => ctx.throw(500))
+    const result = await ProjectModel.find({}).select({__v:0}).exec().catch(e => ctx.throw(500))
     ctx.send({
       items: result
     })
