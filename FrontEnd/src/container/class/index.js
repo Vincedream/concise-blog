@@ -35,17 +35,9 @@ class Class extends React.Component {
     console.log(classKey)
     console.log(this.props.article.choseType)
     return (
-      <div
-        style={{
-          width: "580px",
-          position: "absolute",
-          left: "50%",
-          marginTop: "330px",
-          marginLeft: "-290px"
-        }}
-      >
+      <div className="formTop" style={{width:"580px"}}>
         <ClassBox
-        choseType={this.props.article.choseType}
+          choseType={this.props.article.choseType}
           handleChange={this.handleChange.bind(this)}
           classArr={classArr}
         />

@@ -107,8 +107,6 @@ function initData(items){
         classItems[classNode]=[]
         let a = items[key]
         classItems[classNode].push(a)
-        // console.log(classarray[skey])
-        // console.log(classItems)
       }else{
         let a = items[key]
         classItems[classNode].push(a)

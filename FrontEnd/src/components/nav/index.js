@@ -1,16 +1,16 @@
 import React from 'react'
 import history from '../../config/history'
+import { withRouter } from 'react-router-dom'
 import './index.less'
 
-const Nav = ({}) => {
+const Nav = ({navList=[]}) => {
+  let path = history.location.pathname
   return(
     <nav className="navBox reset">
       <ul>
-        <li onClick={()=>history.push('/')}>文章</li>
-        <li onClick={()=>history.push('/class')}>分类</li>
-        <li onClick={()=>history.push('/project')}>开源</li>
-        <li onClick={()=>history.push('/photo')}>摄影</li>
-        <li onClick={()=>history.push('/about')}>关于</li>
+        {navList.map(v => (
+          <li className={path===v.link ? 'choosed' : null} key={v.title} onClick={()=>history.push(v.link)}>{v.title}</li>
+        ))}
       </ul>
     </nav>
   )

@@ -3,6 +3,7 @@ import axios from "../../config/axios";
 import ContentBox from "../../components/article/contentBox";
 import ArticleComments from "../../components/comment/articleComments";
 import CommentInp from "../../components/comment/commentInput";
+import LoadSlogon from "../../components/loadSlogon"
 
 class About extends React.Component {
   constructor(props) {
@@ -133,9 +134,7 @@ class About extends React.Component {
         />
        </div>
       ):
-      <div style={{textAlign:'center',color:"#555"}}>
-        <p>加载中，请稍后...</p>
-      </div>
+      <LoadSlogon text="加载中，请稍后..." />
       }
       </div>
     );

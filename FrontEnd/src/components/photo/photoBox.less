@@ -1,0 +1,45 @@
+.photoBox {
+  .imgBox {
+    width: 960px;
+    text-align: center;
+    .imgTitle {
+      margin: 20px 0;
+      font-size: 15px;
+      color: #adadad;
+    }
+    .imgContent {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      img {
+        width: 318px;
+        height: 212px;
+        margin-top: 3px;
+      }
+    }
+  }
+  button {
+    position: absolute;
+    height: 35px;
+    margin: 30px 0;
+    padding: 0 10px;
+    left: 50%;
+    font-size: 14px;
+    line-height: 35px;
+    text-align: center;
+    transform: translateX(-50%);
+    border: 1px solid #c3c2c9;
+    border-radius: 4px;
+    color: #485763;
+    cursor: pointer;
+    &:hover {
+      background-color: #fdfdfd;
+    }
+    &:active {
+      background-color: #f7f7f7;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

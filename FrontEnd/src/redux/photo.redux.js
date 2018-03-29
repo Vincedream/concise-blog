@@ -1,43 +1,72 @@
 import axios from "../config/axios"
 
-const GET_PHOTO_DATA = "GET_PHOTO_DATA"
-
-const initState = {
-  total: 0,
-  items: []
+const GET_PHOTO_DATA = 'GET_PHOTO_DATA';
+const LOAD_IMAGE = 'LOAD_IMAGE';
+const initState={
+    photoData:'',
+    currentData:'',
+    nextDataTitle:'',
+    typeNum:2
 }
 
-export function photo(state = initState, action) {
-  switch (action.type) {
-    case GET_PHOTO_DATA:
-      return {...state, ...action.payload}
-    default:
-      return state
-  }
+export function photo(state=initState,action){
+    switch(action.type){
+        case GET_PHOTO_DATA:
+            return {...state,...action.payload};
+        case LOAD_IMAGE:
+            return {...state,...action.payload}
+        default:
+            return state
+    }
 }
 
-function getPhotoSuccess(obj) {
-  return { type: GET_PHOTO_DATA, payload: obj }
+function getDataSuccess(data){
+    return{type:GET_PHOTO_DATA,payload:data}
 }
 
-/**
- * 获取所有照片数据
- */
-export function getPhotoData() {
+export function getPhotoData(state) {
   return async dispatch => {
-    const getData = axios.get('/article/all/',{
-      params: {
-        page: 1,
-        pageSize: 10
-      }
-    })
+    const getData = axios.get('/photo')
     try {
       let result = await getData
+      console.log(result)
+      let allData = result.data.items.reverse()
       if (result.status === 200) {
-        dispatch(getPhotoSuccess(result.data.data))
+        let data = {
+          photoData:allData,
+          currentData:allData.slice(0,2),
+          nextDataTitle:allData[2].title
+      }
+      console.log(data)
+      dispatch(getDataSuccess(data))
       }
     } catch (e) {
       console.log(e)
     }
   }
+}
+
+function loadSuccess(data) {
+    return{type:LOAD_IMAGE,payload:data}
+}
+
+export function loadMoreImage() {
+    return (dispatch,getData)=>{
+      const { typeNum, photoData } = getData().photo
+      console.log(getData())
+        if(typeNum >= photoData.length-1){
+            let imgData = {
+                nextDataTitle:"Good things will happen",
+                currentData:photoData.slice(0,typeNum+1)
+            }
+            dispatch(loadSuccess(imgData))
+        }else{
+            let imgData = {
+                typeNum:typeNum+1,
+                nextDataTitle:photoData[typeNum+1].title,
+                currentData:photoData.slice(0,typeNum+1)
+            }
+            dispatch(loadSuccess(imgData))
+        }
+    }
 }

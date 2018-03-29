@@ -15,9 +15,10 @@ class Article extends React.Component{
     }
   }
   render(){
+    const { total, loadTotal, loadItems } = this.props.article
     return(
       <div>
-        <ArticleBox push={this.props.history.push} items={this.props.article.loadItems} loadMore={this.props.loadMore} total={this.props.article.total} loadTotal={this.props.article.loadTotal} />
+        <ArticleBox push={this.props.history.push} items={loadItems} loadMore={this.props.loadMore} total={total} loadTotal={loadTotal} />
       </div>
     )
   }

@@ -14,11 +14,11 @@ import About from './container/about'
 @withRouter
 class App extends Component {
   render() {
-    console.log(this.props)
+    const navList = [{title:"文章", link:"/"},{title:"分类", link:"/class"},{title:"开源", link:"/project"},{title:"摄影", link:"/photo"},{title:"关于", link:"/about"}]
     return (
       <div style={{position: "relative"}}>
         <Slogon />
-        <Nav />
+        <Nav navList={navList} />
         <Switch>
           <Route exact path="/" component={Article}></Route>
           <Route exact path="/article/:id" component={ArticlePage}></Route>
