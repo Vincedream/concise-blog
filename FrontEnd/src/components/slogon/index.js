@@ -3,7 +3,7 @@ import avatar from "../../img/avatar.jpg";
 
 import "./index.less"
 
-const Slogon = ({}) => {
+const Slogon = () => {
   return(
     <div className="slogonBox reset">
       <div className="avatarBox">

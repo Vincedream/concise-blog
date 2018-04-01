@@ -32,8 +32,6 @@ class Class extends React.Component {
       });
     }
     let classKey = this.props.article.choseType;
-    console.log(classKey)
-    console.log(this.props.article.choseType)
     return (
       <div className="formTop" style={{width:"580px"}}>
         <ClassBox

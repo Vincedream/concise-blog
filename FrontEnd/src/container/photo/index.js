@@ -16,7 +16,7 @@ class Photo extends React.Component{
       <div className="formTop" style={{width:"960px"}} >
       {
         currentData.length===0 ? <LoadSlogon text="加载中,请稍候..." /> :
-        <PhotoBox currentData={this.props.photo.currentData} nextDataTitle={this.props.photo.nextDataTitle} loadMore={this.props.loadMoreImage}/>
+        <PhotoBox currentData={currentData} nextDataTitle={nextDataTitle} loadMore={this.props.loadMoreImage}/>
       }
       </div>
     )

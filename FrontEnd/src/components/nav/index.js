@@ -1,6 +1,5 @@
 import React from 'react'
 import history from '../../config/history'
-import { withRouter } from 'react-router-dom'
 import './index.less'
 
 const Nav = ({navList=[]}) => {
