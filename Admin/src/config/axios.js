@@ -5,7 +5,8 @@ import { getCookie } from "../config/token"
 
 const instance = axios.create({
   timeout: 10000,
-  baseURL: 'http://localhost:3066'
+  baseURL: 'http://39.108.14.16:3067'
+  // baseURL: 'http://localhost:3067'
 })
 instance.interceptors.request.use(
   req => {

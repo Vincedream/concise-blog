@@ -10,7 +10,8 @@ const openNotificationWithIcon = (type, text) => {
 
 const instance = axios.create({
   timeout: 5000,
-  baseURL: 'http://localhost:3067/user'
+  // baseURL: 'http://localhost:3067/user'
+  baseURL: 'http://39.108.14.16:3067/user'
 })
 instance.interceptors.request.use(
   req => {

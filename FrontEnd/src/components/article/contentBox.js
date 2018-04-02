@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactHighMark from 'react-mark-highlight'
+import ReactHighMark from '../mark'
 import "./contentBox.less"
 const ContentBox = ({ data }) => {
   let { title, releaseDate='1-1-1T1', content="" } = data
@@ -7,7 +7,7 @@ const ContentBox = ({ data }) => {
     <div className="contentBox fadeInDown">
       <div className="other">
         <h1>{title}</h1>
-        <p>{releaseDate.split('-')[0]+' / '+releaseDate.split('-')[1]+' / '+(releaseDate.split('-')[2]).split('T')[0]}</p>
+        <p>{releaseDate.replace(/\//g,' / ')}</p>
       </div>
       <div className="content">
         <ReactHighMark source={content} style="diablo" />

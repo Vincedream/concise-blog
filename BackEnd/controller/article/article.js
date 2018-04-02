@@ -1,7 +1,6 @@
 const commentModel = require('../../models/comment')
 const ArticleModel = require('../../models/article')
 const filter = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>~！@#￥……&*（）——|{}【】‘；：”“'。，、？]", 'g') // 过滤敏感字
-const markdown = require('./markdown')
 
 
 class ArticleController {
@@ -39,9 +38,8 @@ class ArticleController {
    */
   static async addArticle(ctx, next) {
     const req = ctx.request.body
-    const htmlContent = markdown(req.content)
     ArticleController.checkArticle(req, ['comments'], ctx)
-    const result = await ArticleModel.create({...req, htmlContent}).catch( e => ctx.throw(500))
+    const result = await ArticleModel.create({...req}).catch( e => ctx.throw(500))
     ctx.status = 201
     ctx.send({message: '添加成功'})
   }
@@ -74,7 +72,7 @@ class ArticleController {
    * 分页查询获取文章列表
    */
   static async getArticle(ctx, next) {
-    let { page = 1, pageSize = 10 } = ctx.query
+    let { page = 1, pageSize = 100 } = ctx.query
     console.log(page,pageSize)
     // 不知道为啥要这样
     page = +page
