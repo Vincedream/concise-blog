@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     const navList = [{title:"文章", link:"/"},{title:"分类", link:"/class"},{title:"开源", link:"/project"},{title:"摄影", link:"/photo"},{title:"关于", link:"/about"}]
     return (
-      <div style={{position: "relative"}}>
+      <div style={{position: 'relative',width:"100%",height:"100%"}}>
         <Slogon />
         <Nav navList={navList} />
         <Switch>

@@ -138,7 +138,7 @@ class About extends React.Component {
     
     return (
       
-      <div ref="aaa" onScroll={this.handleScroll.bind(this)} style={{overflow: "scroll",width: "760px",position: "absolute",left: "50%",marginTop: "330px",marginLeft: "-380px"}}>
+      <div ref="aaa" onScroll={this.handleScroll.bind(this)} style={{overflow: "scroll",width: "780px",position: "absolute",left: "50%",marginTop: "330px",marginLeft: "-390px"}}>
         {this.state.data ? (
        <div>
           <ContentBox data={this.state.data} />

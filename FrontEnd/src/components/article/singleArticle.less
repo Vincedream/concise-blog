@@ -1,49 +1,56 @@
-.signleBox{
-  border-bottom: 1px solid #f5f3f3;
-    padding: 0 5px;
-    border-radius: 3px;
-    cursor: pointer;
-    &:hover {
-      background: #f9f9f9;
-    }
-    &:active{
-      background: #f3f3f3;
-    }
-    h3 {
+.signleBox {
+  display: inline-block;
+  width: 660px;
+  height: 85px;
+  padding: 10%;
+  border-radius: 3px;
+  border-bottom: 0.2px solid #f5f3f3;
+  transition: background 1s ease;  
+  cursor: pointer;
+  &:hover {
+    background: #f9f9f9;
+    transition: background 0.2s ease;
+  }
+  &:active {
+    background: #f3f3f3;
+  }
+  h3 {
+    display: inline-block;
+    padding-left: 10px;
+    height: 22px;
+    width: 75%;
+    margin: 12px 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7d7d7d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  ul {
+    display: inline-block;
+    position: relative;
+    padding-right: 10px;
+    width: 25%;
+    text-align: right;
+    top: -18px;
+    li {
       display: inline-block;
-      height: 22px;
-      width: 75%;
-      margin: 14px 0;
-      font-size: 16px;
-      line-height: 22px;
-      color: #7d7d7d;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      padding: 0 8px;
+      height: 24px;
+      font-size: 13px;
+      color: #888888;
+      background: #e8e8e8;
+      border-radius: 3px;
+      line-height: 24px;
+      margin-left: 5px;
     }
-    ul {
-      display: inline-block;
-      position: relative;
-      width: 25%;
-      text-align: right;
-      top: -21px;
-      li {
-        display: inline-block;
-        padding: 0 8px;
-        height: 24px;
-        font-size: 13px;
-        color: #888888;
-        background: #e8e8e8;
-        border-radius: 3px;
-        line-height: 24px;
-        margin-left: 5px;
-      }
-    }
-    p {
-      font-size: 14px;
-      color: #788590;
-      z-index: -22;
-      
-      margin-bottom: 10px;
-    }
+  }
+  p {
+    font-size: 14px;
+    padding-left: 10px;
+    color: #788590;
+    z-index: -22;
+    margin-bottom: 10px;
+  }
 }
