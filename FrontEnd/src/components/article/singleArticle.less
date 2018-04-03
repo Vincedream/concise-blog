@@ -27,7 +27,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  ul {
+  .class{
     display: inline-block;
     position: relative;
     padding-right: 10px;
@@ -47,10 +47,40 @@
     }
   }
   p {
+    display: inline-block;
+    width: 80%;
     font-size: 14px;
     padding-left: 10px;
     color: #788590;
     z-index: -22;
     margin-bottom: 10px;
+  }
+  .detail{
+    display: inline-block;
+    width: 20%;
+    li{
+      position: relative;
+      display: inline-block;
+      margin: 0 8px;
+      width: 60px;
+      img{
+        width: 17px;
+        height: 17px;
+        margin-right: 5px;
+      }
+      span{
+        font-size: 13px;
+        color: #909090;
+        line-height: 18px;
+      }
+    }
+    li:nth-child(1){
+      width: 38px;
+    }
+    li:nth-child(2){
+      img{
+        margin-bottom: 2px;
+      }
+    }
   }
 }

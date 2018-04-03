@@ -130,11 +130,11 @@ class About extends React.Component {
 
 }
   render() {
-    if(Object.keys(this.refs).length!==0){
-      setTimeout(()=>{
-        console.log(this.refs.aaa.clientHeight)
-      },110)
-    }
+    // if(Object.keys(this.refs).length!==0){
+    //   setTimeout(()=>{
+    //     console.log(this.refs.aaa.clientHeight)
+    //   },110)
+    // }
     
     return (
       
