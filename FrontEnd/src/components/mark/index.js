@@ -5,7 +5,6 @@ import "./index.less"
 
 const ReactHighMark = ({source="",style="fresh"}) => {
   const renderer = new marked.Renderer()
-  console.log(renderer)
   marked.setOptions({
     renderer,
     highlight: (code) => hljs.highlightAuto(code).value,

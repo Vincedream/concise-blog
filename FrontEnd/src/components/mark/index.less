@@ -7,7 +7,7 @@
     padding: 10px;
     border-radius: 3px;
     overflow: scroll;
-    line-height: 22px;
+    line-height: 21px;
     font-size: 14px;
     .hljs-comment {
       color: #9e9e9d;
@@ -44,11 +44,13 @@
   .hljs-comment {
     color: #969694;
   }
+
   img {
     max-width: 630px;
     margin: 0 auto;
     border: 1px solid #ddd;
   }
+  
   a {
     color: #555;
     text-decoration: none;
@@ -89,7 +91,10 @@
     border: 1px solid #e6e6e6;
     border-width: 2px;
   }
+  
   p {
+    color: #333;
+    margin: 20px 0;
     line-height: 24px;
     font-size: 15px;
     img {
@@ -105,28 +110,97 @@
       margin: 0 auto;
     }
   }
+  li p.first {
+    display: inline-block; }
+  li {
+    margin: 0; }
+  ul, ol {
+    padding-left: 30px; }
+  
+  ul :first-child, ol :first-child {
+    margin-top: 0; }
+  
+  dl {
+    padding: 0; }
+    dl dt {
+      font-size: 14px;
+      font-weight: bold;
+      font-style: italic;
+      padding: 0;
+      margin: 15px 0 5px; }
+      dl dt:first-child {
+        padding: 0; }
+      dl dt > :first-child {
+        margin-top: 0; }
+      dl dt > :last-child {
+        margin-bottom: 0; }
+    dl dd {
+      margin: 0 0 15px;
+      padding: 0 15px; }
+      dl dd > :first-child {
+        margin-top: 0; }
+      dl dd > :last-child {
+        margin-bottom: 0; }
 
+        blockquote {
+          border-left: 4px solid #ECF0F3;
+          /*padding: 0 15px;*/
+          padding: 15px;
+          background-color:#F7F9FA;
+          color: #2B3F52; }
+          blockquote > :first-child {
+            margin-top: 0; }
+          blockquote > :last-child {
+            margin-bottom: 0; }
+        
+        table {
+          padding: 0;border-collapse: collapse; }
+          table tr {
+            border-top: 1px solid #cccccc;
+            background-color: white;
+            margin: 0;
+            padding: 0; }
+            table tr:nth-child(2n) {
+              background-color: #f8f8f8; }
+            table tr th {
+              font-weight: bold;
+              border: 1px solid #cccccc;
+              margin: 0;
+              padding: 6px 13px; }
+            table tr td {
+              border: 1px solid #cccccc;
+              margin: 0;
+              padding: 6px 13px; }
+            table tr th :first-child, table tr td :first-child {
+              margin-top: 0; }
+            table tr th :last-child, table tr td :last-child {
+              margin-bottom: 0; }
   strong {
     color: #191919;
     font-size: 16px;
   }
-
   h1 {
-    font-size: 22px;
+    margin-top: 35px;
+    font-size: 24px;
   }
   h2 {
-    font-size: 20px;
+    margin-top: 30px;
+    font-size: 22px;
   }
   h3 {
-    font-size: 18px;
+    margin-top: 25px;
+    font-size: 20px;
   }
   h4 {
-    font-size: 16px;
+    margin-top: 20px;
+    font-size: 18px;
   }
   h5 {
-    font-size: 14px;
+    margin-top: 20px;
+    font-size: 16px;
   }
   h6 {
-    font-size: 12px;
+    margin-top: 20px;
+    font-size: 14px;
   }
 }

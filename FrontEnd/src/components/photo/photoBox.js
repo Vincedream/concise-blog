@@ -9,7 +9,7 @@ const PhotoBox = ({currentData=[], nextDataTitle, loadMore}) => {
         <p className="imgTitle">· {v.title} · </p>
         <div className="imgContent">
         {v.photoArray.map(k => (
-          <img src={k} alt=""/>
+          <img key={k} src={k} alt=""/>
         ))}
         </div>
       </div>

@@ -49,7 +49,6 @@ class About extends React.Component {
     let email = this.refs.commentInp.refs.emailInp.value
     let content = this.refs.commentInp.refs.contentInp.value
     let checkBox = this.refs.commentInp.refs.checkBox.checked
-    console.log(checkBox)
     if (this.checkInfo(email,content)) {  // 当检测通过后
       const date = new Date()
       let subData = {
@@ -84,7 +83,6 @@ class About extends React.Component {
           this.setState({
           })
           setTimeout(()=>{
-            console.log('eee')
             this.setState({
               buttonText:'提交',
             comments: temp
@@ -118,15 +116,12 @@ class About extends React.Component {
     this.getArticle(this.props.match.params.id);
     let docH = document.body.scrollHeight, //滚动条自身高度
     scrollTop = document.body.scrollTop;  //滚动条滚动高度
-    console.log(scrollTop)
   }
   handleScroll(e){
-    console.log('aaa')
     let clientHeight = this.refs.aaa.clientHeight; //可视区域高度
     let scrollTop  = this.refs.aaa.scrollTop;  //滚动条滚动高度
     let scrollHeight = this.refs.aaa.scrollHeight; //滚动内容高度
     if((clientHeight+scrollTop)==(scrollHeight)){} //如果滚动到底部 }
-    console.log(scrollTop)  
 
 }
   render() {

@@ -22,7 +22,7 @@
     margin: 12px 0;
     font-size: 16px;
     line-height: 22px;
-    color: #7d7d7d;
+    color: #4e4e4e;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -48,7 +48,7 @@
   }
   p {
     display: inline-block;
-    width: 80%;
+    width: 75%;
     font-size: 14px;
     padding-left: 10px;
     color: #788590;
@@ -57,25 +57,34 @@
   }
   .detail{
     display: inline-block;
-    width: 20%;
+    width: 25%;
+    position: relative;
+    left: 16px;
     li{
       position: relative;
       display: inline-block;
-      margin: 0 8px;
+      left: 20px;
       width: 60px;
       img{
         width: 17px;
         height: 17px;
         margin-right: 5px;
+        float: right;
+        margin-top: 3px;
       }
       span{
+        display: inline-block;
+        text-align:right; 
+        width: 32px;
         font-size: 13px;
         color: #909090;
         line-height: 18px;
       }
     }
     li:nth-child(1){
-      width: 38px;
+      img{
+        margin-top: 4px;
+      }
     }
     li:nth-child(2){
       img{

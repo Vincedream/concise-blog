@@ -1,3 +1,4 @@
+
 import React from "react";
 import comments from '../../img/comments.png'
 import views from '../../img/views.png'
@@ -19,12 +20,12 @@ const SingleArticle = ({push, v=[]}) => {
       </p>
       <ul className="detail">
         <li>
-        <img src={comments} alt=""/>
           <span>{v.comments.length}</span>
+        <img src={comments} alt=""/>
         </li>
         <li>
-        <img src={views} alt=""/>
         <span>{v.views}</span>
+        <img src={views} alt=""/>
          
         </li>
       </ul>

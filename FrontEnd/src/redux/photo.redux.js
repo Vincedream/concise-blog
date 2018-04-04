@@ -29,7 +29,6 @@ export function getPhotoData(state) {
     const getData = axios.get('/photo')
     try {
       let result = await getData
-      console.log(result)
       let allData = result.data.items.reverse()
       if (result.status === 200) {
         let data = {
@@ -37,7 +36,6 @@ export function getPhotoData(state) {
           currentData:allData.slice(0,2),
           nextDataTitle:allData[2].title
       }
-      console.log(data)
       dispatch(getDataSuccess(data))
       }
     } catch (e) {
@@ -53,7 +51,6 @@ function loadSuccess(data) {
 export function loadMoreImage() {
     return (dispatch,getData)=>{
       const { typeNum, photoData } = getData().photo
-      console.log(getData())
         if(typeNum >= photoData.length-1){
             let imgData = {
                 nextDataTitle:"Good things will happen",
