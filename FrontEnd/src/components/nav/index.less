@@ -11,10 +11,13 @@
     color: black;
   }
   li {
+    position: relative;
     display: inline-block;
-    margin: 0 24px;
+    margin: 0 18px;
+    padding: 0 6px;
     color: #a0a0a0;
     font-size: 15px;
+    transition: 0.15s all linear;
     cursor: pointer;
     &:hover {
       color: #636363;
@@ -22,6 +25,23 @@
     &:active{
       color: #7b7b7b;
     }
+    &::before{
+      content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid #000;
+    transition: 0.15s all linear;
+    }
+  }
+  li:hover::before {
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition-delay: 0.1s;
+    border-bottom-color: #000;
   }
   &:after {
     content: "";
