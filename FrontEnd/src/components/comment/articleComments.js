@@ -9,7 +9,7 @@ const ArticleComments = ({commentsList=[]}) => {
       <h4>***{v.email.slice(3, v.email.length)} ：</h4>
       <div className="comment">{v.content}</div>
       <div className="time">
-      <span>{v.createDate}</span>
+      <span>{(v.createDate).replace(/\//g," / ")}</span>
       </div>
       <div className="line"></div>
       </div>
