@@ -10,6 +10,7 @@ import Class from './container/class'
 import Project from './container/project'
 import Photo from './container/photo'
 import About from './container/about'
+import NotFind from './container/notFind'
 
 @withRouter
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path="/project" component={Project}></Route>
           <Route exact path="/photo" component={Photo}></Route>
           <Route exact path="/about" component={About}></Route>
+          <Route component={NotFind}></Route>
         </Switch>
       </div>
     );
