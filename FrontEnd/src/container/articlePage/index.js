@@ -114,26 +114,11 @@ class About extends React.Component {
   }
   componentDidMount() {
     this.getArticle(this.props.match.params.id);
-    let docH = document.body.scrollHeight, //滚动条自身高度
-    scrollTop = document.body.scrollTop;  //滚动条滚动高度
   }
-  handleScroll(e){
-    let clientHeight = this.refs.aaa.clientHeight; //可视区域高度
-    let scrollTop  = this.refs.aaa.scrollTop;  //滚动条滚动高度
-    let scrollHeight = this.refs.aaa.scrollHeight; //滚动内容高度
-    if((clientHeight+scrollTop)==(scrollHeight)){} //如果滚动到底部 }
-
-}
+ 
   render() {
-    // if(Object.keys(this.refs).length!==0){
-    //   setTimeout(()=>{
-    //     console.log(this.refs.aaa.clientHeight)
-    //   },110)
-    // }
-    
     return (
-      
-      <div ref="aaa" onScroll={this.handleScroll.bind(this)} style={{overflow: "scroll",width: "780px",position: "absolute",left: "50%",marginTop: "330px",marginLeft: "-390px"}}>
+      <div  style={{overflow: "scroll",width: "780px",position: "absolute",left: "50%",marginTop: "330px",marginLeft: "-390px"}}>
         {this.state.data ? (
        <div>
           <ContentBox data={this.state.data} />
