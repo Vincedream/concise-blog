@@ -13,7 +13,24 @@ a { text-decoration:none; }
 
 /* .clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;} */
 /* .clearfix { *zoom:1; } */
-
+//强制显示滚动条:
+body { overflow: scroll; }
+//强制隐藏滚动条:
+body { overflow: hidden; }
+//隐藏IE的水平滚动条:
+body { overflow-x: hidden; }
+//隐藏IE的垂直滚动条:
+body { overflow-y: hidden; }
+//强制显示IE的水平滚动条:
+body { overflow-x: scroll; }
+//强制显示IE的垂直滚动条:
+body { overflow-y: scroll; }
+//强制显示Mozilla的水平滚动条:
+body { overflow:-moz-scrollbars-horizontal; }
+//注意: 仅仅强制显示水平滚动条. 也就是说, 即使需要显示垂直滚动条时, 垂直滚动条也不会出现.
+//强制显示Mozilla的垂直滚动条:
+body { overflow:-moz-scrollbars-vertical; }
+//注意: 仅仅强制显示垂直滚动条. 也就是说, 即使需要显示水平滚动条时, 水平滚动条也不会出现.
 .reset{
   div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
   h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }

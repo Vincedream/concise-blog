@@ -118,7 +118,7 @@ class About extends React.Component {
  
   render() {
     return (
-      <div  style={{overflow: "scroll",width: "780px",position: "absolute",left: "50%",marginTop: "330px",marginLeft: "-390px"}}>
+      <div  style={{width: "780px",position: "absolute",left: "50%",marginTop: "330px",marginLeft: "-390px"}}>
         {this.state.data ? (
        <div>
           <ContentBox data={this.state.data} />
