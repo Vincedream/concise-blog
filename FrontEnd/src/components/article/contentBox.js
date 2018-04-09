@@ -7,7 +7,7 @@ const ContentBox = ({ data }) => {
     <div className="contentBox fadeInDown">
       <div className="other">
         <h1>{title}</h1>
-        <p>{releaseDate.replace(/\//g,' / ')}</p>
+        <p>{releaseDate.slice(0,10).replace(/\-/g,' / ')}</p>
       </div>
       <div className="content">
         <ReactHighMark source={content} style="diablo" />

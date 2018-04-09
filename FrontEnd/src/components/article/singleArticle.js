@@ -16,7 +16,7 @@ const SingleArticle = ({push, v=[]}) => {
       <h3 className="title">{v.title}</h3>
       <ul className="class" >{v.classify.map(j => <li key={j + v._id}>{j}</li>)}</ul>
       <p>
-        {v.releaseDate.replace(/\//g,' / ')}
+        {v.releaseDate.slice(0,10).replace(/\-/g,' / ')}
       </p>
       <ul className="detail">
         <li>
