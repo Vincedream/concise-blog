@@ -8,7 +8,9 @@ import { getPhotoData, loadMoreImage } from '../../redux/photo.redux'
   {getPhotoData, loadMoreImage})
 class Photo extends React.Component{
   componentDidMount(){
-    this.props.getPhotoData()
+    if (this.props.photo.photoData.length === 0) {
+      this.props.getPhotoData()
+    }
   }
   render(){
     let { currentData, nextDataTitle } = this.props.photo

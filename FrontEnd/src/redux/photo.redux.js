@@ -1,12 +1,15 @@
 import axios from "../config/axios"
+import * as originHttp from 'axios'
 
 const GET_PHOTO_DATA = 'GET_PHOTO_DATA';
 const LOAD_IMAGE = 'LOAD_IMAGE';
+const PRE_LOAD_FIRST_IMAGE = 'PRE_LOAD_FIRST_IMAGE';
 const initState={
     photoData:'',
     currentData:'',
     nextDataTitle:'',
-    typeNum:2
+    typeNum:2,
+    firstPreLoad: false
 }
 
 export function photo(state=initState,action){
@@ -15,6 +18,8 @@ export function photo(state=initState,action){
             return {...state,...action.payload};
         case LOAD_IMAGE:
             return {...state,...action.payload}
+        case PRE_LOAD_FIRST_IMAGE:
+            return {...state,firstPreLoad:action.payload}
         default:
             return state
     }
@@ -45,7 +50,11 @@ export function getPhotoData(state) {
 }
 
 function loadSuccess(data) {
-    return{type:LOAD_IMAGE,payload:data}
+    return {type: LOAD_IMAGE,payload: data}
+}
+
+export function preLoadFirstImg(){
+    return {type: PRE_LOAD_FIRST_IMAGE, payload: true}
 }
 
 export function loadMoreImage() {
@@ -64,6 +73,12 @@ export function loadMoreImage() {
                 currentData:photoData.slice(0,typeNum+1)
             }
             dispatch(loadSuccess(imgData))
+            // 触发下一组图片预加载
+            let preLoadArr =  photoData[typeNum+1].photoArray
+            preLoadArr.forEach(function(value){
+                originHttp.get(value)
+                console.log(value)
+            })
         }
     }
 }
