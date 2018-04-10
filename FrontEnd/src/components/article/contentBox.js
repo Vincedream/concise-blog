@@ -10,7 +10,7 @@ const ContentBox = ({ data }) => {
         <p>{releaseDate.slice(0,10).replace(/\-/g,' / ')}</p>
       </div>
       <div className="content">
-        <ReactHighMark source={content} style="diablo" />
+        <ReactHighMark source={content} style="fresh" />
       </div>
       
           <div className="thankBox">
