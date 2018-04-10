@@ -42,9 +42,9 @@ class Class extends React.Component {
         { classKey==="" ? 
         <p className="fadeInDown" style={{textAlign:"center",color:"#555",marginTop:"40px"}} >Pick one you may like it</p> :
         <QueueAnim key={this.state.num++} duration={[200,80]} type={['bottom','bottom']} >
-        <div className="reset " style={{ width: "600px" }}>
+        <div className="reset " >
           {classArr.length === 0 ? null : (
-            <div className="fadeInDown   ">
+            <div className="fadeInDown" style={{width: "660px",position: "absolute",left: "50%",marginLeft: "-330px"}}>
               {data[classKey].map(v => (
                 <SingleArticle
                   key={v._id}
